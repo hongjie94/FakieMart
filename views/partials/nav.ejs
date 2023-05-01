@@ -1,0 +1,16 @@
+
+<nav class="navbar_div">
+  <div class="navbar-container">
+    <a href="/products" class="navbar-logo">FakieMart</a>
+    <ul class="navbar-menu">
+      <li class="navbar-item"><a href="/about" class="navbar-link <%= page === 'about' ? 'linkActive' : '' %>">About</a></li>
+      <li class="navbar-item"><a href="/contact" class="navbar-link <%= page === 'contact' ? 'linkActive' : '' %>">Contact</a></li>
+      <li class="navbar-item"><a href="/products" class="navbar-link <%= page === 'products' ? 'linkActive' : '' %>">Products</a></li>
+      <li class="navbar-item"><a href="/cart" class="navbar-link <%= page === 'cart' ? 'linkActive' : '' %>">Cart</a></li>
+      <li class="navbar-item"><a href="/logoff" class="navbar-link">Logoff</a></li>
+    </ul>
+    <div class="navbar-toggle">
+      <span class="navbar-toggle-icon"></span>
+    </div>
+  </div>
+</nav>  

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head.ejs') %>
+<body style="display: block;">
+<%- include('./partials/nav.ejs') %>
+<div class="product-page my-5">
+  <div class="product-grid mt-5">
+    <%products.forEach(product =>{%>
+      <div class="product-item">
+        <a class="product-link" href="/products/<%=product.id%>">
+        <img src="<%=product.image%>" alt="<%=product.title%>">
+        <h3><%=product.title%></h3>
+        <p class="mb-0">$<%=product.price.toFixed(2)%></p>
+      
+        <div class="rating-box">
+          <div class="rating" style="width:<%= (product.rating.rate/ 5) * 100 %>%;"></div>
+        </div>
+      </a>
+      <div class="productsBtn">
+        <button id="add-to-cart" onClick="addCart(<%= JSON.stringify(product)%>)">Add to Cart</button>
+      </div>
+      </div>
+    <% })%>
+  </div>
+</div>
+<%- include('./partials/model.ejs') %>
+</body>
+<%- include('./partials/footer.ejs') %>
+</html>

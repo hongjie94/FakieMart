@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head.ejs') %>
+<body>
+<%- include('./partials/nav.ejs') %>
+
+<div class="product">
+  <div class="product-image">
+      <img src=" <%=product.image%>" alt="Product Image">
+  </div>
+  <div class="product-info">
+
+    <h1> <%=product.title%></h1>
+    <p>Category: <%=product.category%></p>
+
+    <div class="product-price">$<%=product.price.toFixed(2)%></div>
+    
+    <div class="product-description">
+      <h2>Description</h2>
+      <p><%=product.description%></p>
+    </div>
+     
+    <div class="rating-box">
+      <div class="rating" style="width:<%= (product.rating.rate/ 5) * 100 %>%;"></div>
+      <div class="product-rating">
+        <span>(<%=product.rating.count%> reviews)</span>
+      </div>
+    </div>
+    <button class="add-to-cart" onClick="addCart(<%= JSON.stringify(product)%>)">Add to Cart</button>
+  </div>
+</div>
+<%- include('./partials/model.ejs') %>
+<%- include('./partials/footer.ejs') %>
+</body>
+</html>
