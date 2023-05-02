@@ -2,10 +2,10 @@
   "name": "web485project",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "heroku-prebuild": "npm install",
-    "start":"node main.js",
+    "start":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
