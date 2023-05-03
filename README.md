@@ -1,5 +1,7 @@
-# FakieMart
+#  [https://fakie-mart888.herokuapp.com](FakieMart)
 This project is an e-commerce web application that integrates with products from [https://fakestoreapi.com](https://fakestoreapi.com). The project is built using Node.js, EJS, Express, jQuery, and Bootstrap.
+
+
 
 #### Database: MongoDB is used as the database to store user information, and product details.
 
