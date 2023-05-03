@@ -6,6 +6,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 const port = process.env.PORT || 3000;
+require('dotenv').config()
 
 // Middleware
 const cookieParser = require("cookie-parser");
@@ -24,7 +25,7 @@ const myProducts = require("./public/products.json");
 
 // MongoDB Configuration
 const  mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/cis485", {
+mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
